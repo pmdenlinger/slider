@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var sliderValue: Float = 0.3
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        VStack {
+            
+            Text("Value = \(sliderValue)")
+            
+//             in Represents the range of slide values we need...
+            Slider(value: $sliderValue, in: 1...100)
+            
+        }
     }
 }
 
